@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RENTACARAPP", "RENTACARAPP\RENTACARAPP.csproj", "{AEADE95B-26DD-4BD0-BEA9-CC287EA88566}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEADE95B-26DD-4BD0-BEA9-CC287EA88566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEADE95B-26DD-4BD0-BEA9-CC287EA88566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEADE95B-26DD-4BD0-BEA9-CC287EA88566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEADE95B-26DD-4BD0-BEA9-CC287EA88566}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62EA6F40-7E1A-4E87-A4B7-4557D576B378}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,52 @@
+﻿@using RENTACARAPP.Models.Entity
+@model List<TMARKA>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<style>
+    .tabla {
+        width: max-content;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .headers {
+        text-align: center;
+        
+    }
+
+    .theader {
+        text-align: center;
+    }
+</style>
+
+
+<h2 class="headers">Markalar</h2>
+
+<div class="tabla">
+    <table class="table table-bordered" style="border:2px solid red;">
+        <tr>
+            <th>ID</th>
+            <th>AD</th>
+            <th>Detay</th>
+        </tr>
+        @foreach (var bra in Model)
+        {
+            <tr>
+                <td>@bra.ID</td>
+                <td>@bra.MARKA</td>
+                <td>@bra.DETAY</td>
+                <td>
+                    @Html.ActionLink("Sil", "MarkaSil", new { id = bra.ID },
+               new { @class = "btn btn-danger", onclick = "return confirm('silmek istiyor musunuz')" })
+            </td>
+            <td><a href="/Marka/MarkaGetir/@bra.ID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+
+    }
+    </table>
+    <a class="btn btn-primary" href="/Marka/MarkaEkle/">Yeni Marka Ekle</a>
+</div>

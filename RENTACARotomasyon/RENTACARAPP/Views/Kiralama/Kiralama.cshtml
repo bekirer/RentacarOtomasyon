@@ -1,0 +1,54 @@
+﻿@model RENTACARAPP.Models.Entity.TAKSIYON
+
+@{
+    ViewBag.Title = "Kiralama";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+<h2 style="font-size:40">Eklemek İstediğiniz Arabaya Ait İstenilen Bilgileri Girin</h2>
+
+<form class="form-group" method="post" id="frm-car-rent">
+
+    <div></div>
+    
+    <div style="margin-top:15px">
+
+        <label style="font-size:20px"> Uye ID Yazın</label>
+        @Html.TextBoxFor(m => m.UYE, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-top:15px">
+        <label style="font-size:20px"> Araba ID Yazın</label>
+        @Html.TextBoxFor(a => a.ARABA, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label style="font-size:20px"> Personel ID Yazın</label>
+        @Html.TextBoxFor(a => a.SATISELEMANI, new { @class = "form-control" })
+
+
+    </div>
+    <div style="margin-top:15px">
+        <p style="color:red;">@ViewBag.KiralamaError</p>
+        <label style="font-size:20px"> Kiralama Tarihi Yazın</label>
+        <input type="date" class="form-control" name="KIRALAMATARIH"
+               id="rent-date" />
+
+    </div>
+    <div style="margin-top:15px">
+        <p style="color:red;">@ViewBag.TeslimError</p>
+        <label style="font-size:20px">Teslim Tarihini Yazın</label>
+        <input type="date" class="form-control" name="TESLIMTARIH" />
+
+
+    </div>
+
+    <button class="btn btn-success"> ARABAYI KİRALA </button>
+
+
+    </div>
+
+</form>
+

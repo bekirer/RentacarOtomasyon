@@ -1,0 +1,32 @@
+﻿@model RENTACARAPP.Models.Entity.TSATISELEMAN
+@{
+    ViewBag.Title = "SatislemanEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<style>
+    .headers {
+        text-align: center;
+        font-size: 40;
+    }
+</style>
+
+<form class="form-group" style="text-align:center" method="post">
+    <div>
+
+        <h2 class="headers">Eklemek İstediğiniz Satış Elamanının Adını Yazın</h2>
+
+       
+        @Html.TextAreaFor(x=>x.SATISLEMAN,new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.SATISLEMAN, "", new { @style = "color:blue; font-size:20S" })
+
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id:"buton1" style="font-size:20px">
+            EKLEMEK İÇİN TIKLA
+        </button>
+
+
+
+    </div>
+</form>

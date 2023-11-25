@@ -1,0 +1,93 @@
+﻿@using RENTACARAPP.Models.Entity
+@model List<TARABA>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<style>
+    .tabla {
+        width: max-content;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .headers {
+        text-align: center;
+        font-size
+    }
+
+    .theader {
+        text-align: center;
+    }
+</style>
+<h2 class="headers">Araba Sayfası</h2>
+
+@using (Html.BeginForm("Index", "Araba", FormMethod.Get))
+{
+
+   <div class="tabla" style="margin-top:20px;margin-bottom:20px">
+       <b >Aramak İstediğiniz Arabanın Modelilini Girin: &nbsp;</b>@Html.TextBox("p")
+       <input type="submit" value="ARA"/>
+    </div>
+}
+
+<div class="tabla">
+
+    
+
+    <table class="table table-bordered" style="border:2px solid red;">
+        <tr>
+            <td>ID</td>
+            <th>Arabanın Modeli</th>
+            <th>Arabanın Markası</th>
+            <th>Arabanın Kasa Tipi</th>
+            <th>Arabanın Üretim Yılı</th>
+            <th>Arabanın Kilometre Bilgisi</th>
+            <th>Durum</th>
+        </tr>
+
+        @foreach (var a in Model)
+        {
+            <tr>
+                <td>
+                    @a.ID
+                </td>
+
+                <td>
+                    @a.MODEL
+                </td>
+
+                <td>
+                    @a.TKASATIPI.KASATIPI
+                </td>
+
+                <td>
+                    @a.TMARKA.MARKA
+                </td>
+
+                <td>
+                    @a.URETIMYILI
+                </td>
+
+                <td>
+                    @a.KM
+                </td>
+
+                <td>
+                    @a.DURUM
+                </td>
+                <td>
+                    <a href="/Araba/ArabaSil/@a.ID"
+                       class="btn btn-danger">Sil</a>
+                </td>
+                <td>
+                    <a href="/Araba/ArabaGetir/@a.ID"
+                       class="btn btn-success">Güncelle</a>
+                </td>
+
+            </tr>
+        }
+    </table>
+    <a href="/Araba/ArabaEkle/" class="btn btn-primary">Yeni Araba Ekle</a>
+</div>

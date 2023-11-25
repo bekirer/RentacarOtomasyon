@@ -1,0 +1,52 @@
+﻿@model RENTACARAPP.Models.Entity.TARABA
+@{
+    ViewBag.Title = "ArabaEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2 style="font-size:40">Eklemek İstediğiniz Arabaya Ait İstenilen Bilgileri Girin</h2>
+
+<form class="form-group" method="post" >
+
+    <div></div>
+    <div style="margin-top:15px">
+
+        <label style="font-size:20px"> Eklemek  Arabanın Markasını Yazın</label>
+        @Html.DropDownListFor(m => m.TMARKA.ID, (List<SelectListItem>)ViewBag.v2, new{ @class="form-control"})
+
+        <label style="font-size:20px"> Eklemek  Arabanın Modelini  Yazın</label>
+        @Html.TextBoxFor(a => a.MODEL, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px" ">
+
+        <label style="font-size:20px"> Eklemek  Arabanın Kasa Tipini Yazın</label>
+        @Html.DropDownListFor(k => k.TKASATIPI.ID, (List<SelectListItem>)ViewBag.v1, new { @class = "form-control" })
+
+    </div>
+
+    <div style="margin-top:15px" ">
+
+    </div>
+
+    <div style="margin-top:15px" ">
+
+        <label style="font-size:20px"> Eklemek  Arabanın Üretim Yılını Yazın</label>
+        @Html.TextBoxFor(y => y.URETIMYILI, new { @class = "form-control" })
+
+    </div>
+
+    <div style="margin-top:15px" ">
+
+        <label style="font-size:20px"> Eklemek  Arabanın Kilometre Bilgisini Yazın</label>
+        @Html.TextBoxFor(km => km.KM, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+
+        <button class="btn btn-success"> EKLE </button>
+
+
+    </div>
+    
+</form>

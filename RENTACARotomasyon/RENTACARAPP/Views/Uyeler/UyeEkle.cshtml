@@ -1,0 +1,98 @@
+﻿@model RENTACARAPP.Models.Entity.TUYELER
+@{
+    ViewBag.Title = "UyeEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<style>
+    .headers {
+        text-align: center;
+        font-size: 40;
+        
+        color:red;
+    }
+    .ara {
+        text-align: center;
+        font-size: 20;
+    }
+</style>
+<h2 class="headers">ÜYE KAYIT FORMU</h2>
+<form class="form-group" style="text-align:center" method="post">
+    <div>
+
+        <h2 class="ara">Üyenin Adını Yazın</h2>
+
+
+        @Html.TextAreaFor(x => x.AD, new { @class = "form-control" })
+    <div style="margin-top:5">
+        @Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:blue; font-size:20;" })
+    </div>
+    </div>
+    <div>
+
+        <h2 class="ara"> Üyenin Soyadını Yazın</h2>
+
+
+        @Html.TextAreaFor(x => x.SOYAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SOYAD, "", new { @style = "color:blue; font-size:20S" })
+
+    </div>
+
+    <div>
+
+        <h2 class="ara"> Üyenin Mail Adresini Yazın</h2>
+
+
+        @Html.TextAreaFor(x => x.EPOSTA, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.EPOSTA, "", new { @style = "color:blue; font-size:20S" })
+
+    </div>
+
+    <div>
+
+        <h2 class="ara"> Üyenin Kullanıcı Adını Yazın</h2>
+
+
+        @Html.TextAreaFor(x => x.NICKNAME, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.NICKNAME, "", new { @style = "color:blue; font-size:20S" })
+
+    </div>
+    <div>
+
+        <h2 class="ara"> Üyenin Şifresini Yazın</h2>
+
+
+        @Html.TextAreaFor(x => x.SIFRE, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SIFRE, "", new { @style = "color:blue; font-size:20S" })
+
+    </div>
+
+    <div>
+
+        <h2 class="ara">Üyenin Fotoğraf Linki</h2>
+
+
+        @Html.TextAreaFor(x => x.UYEFOTO, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.UYEFOTO, "", new { @style = "color:blue; font-size:20S" })
+
+    </div>
+    <div>
+
+        <h2 class="ara">Üyenin Telefon Numarasını Yazın</h2>
+
+
+        @Html.TextAreaFor(x => x.SOYAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SOYAD, "", new { @style = "color:blue; font-size:20S" })
+
+    </div>
+
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id:"buton1" style="font-size:20px">
+            EKLEMEK İÇİN TIKLA
+        </button>
+
+
+
+    </div>
+</form>
+

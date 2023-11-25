@@ -1,0 +1,55 @@
+﻿@using RENTACARAPP.Models.Entity
+@model List<TSATISELEMAN>
+
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/Layout.cshtml";
+    }
+
+    <style>
+        .tabla {
+            width: max-content;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .headers {
+            text-align: center;
+            font-size
+        }
+
+        .theader {
+            text-align: center;
+        }
+    </style>
+    <h2 class="headers">PERSONEL LİSTESİ</h2>
+
+
+
+    <div class="tabla">
+        <table class="table table-bordered" style="border:2px solid red">
+            <tr>
+                <th class="theader">SATIŞ ELEMANI ID</th>
+                <th class="theader">SATIŞ ELEMANI ADI</th>
+            </tr>
+
+            @foreach (var asd in Model)
+            {
+
+                <tr>
+                    <td>@asd.ID</td>
+                    <td>@asd.SATISLEMAN</td>
+                    <td>
+                        <a href="/Satisleman/SatislemanSil/@asd.ID" class="btn btn-danger">Sil</a>
+                    </td>
+
+                    <td><a href="/Satisleman/SatislemanGetir/@asd.ID" class="btn btn-success">Güncelle</a></td>
+
+
+                </tr>
+            }
+        </table>
+
+        <a href="/Satisleman/SatislemanEkle/" class="btn btn-primary" style="margin-bottom:15px">Yeni Personel Ekle</a>
+    </div>

@@ -1,0 +1,109 @@
+﻿
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding:  0 0 0 0;
+            overflow: hidden;
+            background-color: gray;
+            text-align:center;
+            
+        }
+
+        .anasayfa {
+            font-family: 'Cambria Math';
+            font-style: normal;
+            font-size: 25px;
+            height: auto;
+            width: auto;
+            text-align: center;
+            list-style-type: none;
+            margin:0;
+            padding:  0 ;
+            overflow: hidden;
+            background-color: red;
+        }
+       
+        li {
+            text-align:center;
+            display:inline;
+        }
+
+            li a {
+                width:200px;
+                display:inline-block;
+                font-size: 22px;
+                font-style: initial;
+                font-family: 'Cambria Math';
+               
+                color: black;
+                
+                padding: 10px 20px;
+                text-decoration: solid;
+            }
+
+
+
+
+                li a:hover {
+                    background-color: cornflowerblue;
+                }
+    
+
+    </style>
+    
+</head>
+
+<body>
+    <div class="anasayfa"
+    <be><h1 class>BAT-TERFLY ARAÇ KİRALAMA</be></h1></div>
+
+    <div>
+        <ul>
+
+
+            <li><a class="active" href="#home"><img src="https://i.hizliresim.com/l2wxxys.png"><div></div></i> Anasayfa</a></li>
+
+            <li><a href="/KasaTipi/Index/"><img src="https://img.icons8.com/ios/50/null/traffic-jam.png" /><div></div></i>Araç Kasa Tipi</a></li>
+
+            <li><a href="/Araba/Index/"><img src="https://i.hizliresim.com/h7zzhpu.png" /><div></div></i>Arabalar</a></li>
+
+            <li><a href="/Marka/Index/"><img src="https://i.hizliresim.com/o3guzp4.png" /><div></div></i>Markalar</a></li>
+            
+            <li><a href="/Uyeler/Index/"><img src="https://i.hizliresim.com/9ha1utm.png"><div></div></i>Üyeler</a></li>
+
+            <li><a href="/Satisleman/Index/"><img src="https://i.hizliresim.com/d4z55hs.png"><div></div></i>Satış Elemanları</a></li>
+
+            <li><a href="/Kiralama/Kiralama/"><img src="https://i.hizliresim.com/hly8tds.png"><div></div></i>Kiralama</a></li>
+
+            <li><a href="/Kiralama/Index/"><img src="https://i.hizliresim.com/rr0w4f9.png"><div></div></i>Teslimat</a></li>
+
+            <li><a href="#contact"><img src="https://i.hizliresim.com/khak0vd.png"><div></div></i>Kasa</a></li>
+
+            <li><a href="#news"><img src="https://i.hizliresim.com/24m4dla.png" /><div></div></i>Araç Tipi</a></li>
+
+            <li><a href="#contact"><img src="https://i.hizliresim.com/romuyyy.png"><div></div></i>Ayarlar</a></li>
+
+            <li><a href="#contact"><img src="https://i.hizliresim.com/56253ox.png"><div></div></i>Yardım</a></li>
+
+            <li><a href="#contact"><img src="https://i.hizliresim.com/f8ja4h7.png"><div></div></i>Çıkış</a></li>
+
+
+        </ul>
+    </div>
+
+
+    <div class="main">@RenderBody()</div>
+
+</body>
+</html>

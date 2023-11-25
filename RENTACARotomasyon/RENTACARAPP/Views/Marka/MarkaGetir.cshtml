@@ -1,0 +1,35 @@
+﻿@model RENTACARAPP.Models.Entity.TMARKA
+@{
+    ViewBag.Title = "MarkaGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("MarkaGuncelle", "Marka", FormMethod.Post))
+{
+    <div style="margin-bottom:15"></div>
+
+
+
+    <div class="form-group">
+
+        <div style="margin-bottom:15px">
+        <label>Marka ID</label>
+        @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })
+    </div>
+
+
+
+    <div style="margin-bottom:15px">
+    <label>Marka İsmi</label>
+    @Html.TextBoxFor(m => m.MARKA, new { @class = "form-control" })
+    </div>
+
+
+    <div style="margin-bottom:15px">
+    <label>Detay</label>
+    @Html.TextAreaFor(m => m.DETAY, new { @class = "form-control" })
+    </div>
+        <button class="btn btn-warning">Marka Bilgilerini Güncelle</button>
+    </div>
+}
+

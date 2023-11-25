@@ -1,0 +1,47 @@
+﻿@model RENTACARAPP.Models.Entity.TUYELER
+@{
+    ViewBag.Title = "UyeGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("UyeGuncelle", "Uyeler", FormMethod.Post))
+{
+    <div class="form-group" style="margin:15px">
+
+        @Html.LabelFor(k => k.ID)
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        <br />
+        <label class="col-xs-pull-11">ÜYE ADI</label>
+
+        @Html.TextBoxFor(k => k.AD, new { @class = "form-control" })
+        <br />
+        <label class="col-xs-pull-11">ÜYE SOYADI</label>
+
+        @Html.TextBoxFor(k => k.SOYAD, new { @class = "form-control" })
+        <br />
+        <label class="col-xs-pull-11">ÜYE KULLANICI ADI</label>
+
+        @Html.TextBoxFor(k => k.NICKNAME, new { @class = "form-control" })
+        <br />
+        <label class="col-xs-pull-11">ÜYE E-POSTA ADRESİ</label>
+
+        @Html.TextBoxFor(k => k.EPOSTA, new { @class = "form-control" })
+        <br />
+        <label class="col-xs-pull-11">ÜYE ŞİFRE</label>
+
+        @Html.TextBoxFor(k => k.SIFRE, new { @class = "form-control" })
+        <br />
+        <label class="col-xs-pull-11">ÜYE TELEFON NUMARSI</label>
+        @*@@Html.LabelFor(k=>k.KASATIPI)*@
+        @Html.TextBoxFor(k => k.TELNO, new { @class = "form-control" })
+        <br />
+        <label class="col-xs-pull-11">ÜYE FOTOĞRAF LİNKİ</label>
+        
+        @Html.TextBoxFor(k => k.UYEFOTO, new { @class = "form-control" })
+        <br />
+    </div>
+    <div style="margin-bottom:15">
+        <button class="btn btn-warning">Güncelle</button>
+    </div>
+}
+

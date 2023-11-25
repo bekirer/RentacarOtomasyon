@@ -1,0 +1,69 @@
+﻿@using RENTACARAPP.Models.Entity
+@model List<TUYELER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<style>
+    .tabla {
+        width: max-content;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .headers {
+        text-align: center;
+        font-size
+    }
+
+    .theader {
+        text-align: center;
+    }
+</style>
+<h2 class="headers">ÜYELER LİSTESİ</h2>
+
+
+
+<div class="tabla">
+    <table class="table table-bordered" style="border:2px solid red;">
+        <tr>
+            <th class="theader">ÜYE ID</th>
+            <th class="theader">ÜYE AD</th>
+            <th class="theader">ÜYE SOYADI</th>
+            <th class="theader">EPOSTA</th>
+            <th class="theader">KULLANICI ADI</th>
+            <th class="theader">ŞİFRESİ</th>
+            <th class="theader">TELEFON</th>
+            <th class="theader">EHLİYET</th>
+        </tr>
+
+        @foreach (var UYE in Model)
+        {
+
+            <tr>
+                <td>@UYE.ID</td>
+                <td>@UYE.AD</td>
+                <td>@UYE.SOYAD</td>
+                <td>@UYE.EPOSTA</td>
+                <td>@UYE.NICKNAME</td>
+                <td>@UYE.SIFRE</td>
+                <td>@UYE.TELNO</td>
+                <td>@UYE.EHLIYET</td>
+                <td>
+                    <a href="/Uyeler/UyeSil/@UYE.ID" class="btn btn-danger">Sil</a>
+                </td>
+
+                <td><a href="/Uyeler/UyeGetir/@UYE.ID" class="btn btn-success">Güncelle</a></td>
+
+
+            </tr>
+        }
+    </table>
+
+    <a href="/Uyeler/UyeEkle/" class="btn btn-primary" style="margin-bottom:15px">Yeni Üye Ekle</a>
+</div>
+
+
+

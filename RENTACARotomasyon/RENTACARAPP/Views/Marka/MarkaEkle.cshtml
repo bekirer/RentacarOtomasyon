@@ -1,0 +1,30 @@
+﻿@model RENTACARAPP.Models.Entity.TMARKA
+@{
+    ViewBag.Title = "MarkaEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form class="form-group" method="post" style="text-align:center">
+
+    <div></div>
+    <div style="margin-top:15px">
+
+        <h2 style="font-size:40">Eklemek İstediğiniz Markayı Yazın</h2>
+        @Html.TextBoxFor(m => m.MARKA, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px"">
+
+        <label style="font-size:20px"> Detay</label>
+        @Html.TextAreaFor(m => m.DETAY, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+
+        <button class="btn btn-info"> MARKAYI EKLE </button>
+       
+
+    </div>
+
+</form>
+

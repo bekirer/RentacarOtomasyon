@@ -1,0 +1,22 @@
+﻿@model RENTACARAPP.Models.Entity.TKASATIPI
+    @{
+        ViewBag.Title = "KasaTipiGetir";
+        Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("KasaTipiGuncelle", "KasaTipi", FormMethod.Post))
+{
+                <div class="form-group" style="margin:15px" >
+                    
+                    @Html.LabelFor(k => k.ID)
+                    @Html.TextBoxFor(k => k.ID, new {@class="form-control"})
+                    <br/>
+                    <label class="col-xs-pull-11">KASA TİPİ</label>
+                  @*@@Html.LabelFor(k=>k.KASATIPI)*@
+                    @Html.TextBoxFor(k=>k.KASATIPI, new { @class = "form-control" })
+               </div>
+               <div style="margin-bottom:15">
+                   <button class="btn btn-warning">Güncelle</button>
+               </div>
+            }
+

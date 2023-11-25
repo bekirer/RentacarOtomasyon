@@ -1,0 +1,23 @@
+﻿@model RENTACARAPP.Models.Entity.TSATISELEMAN
+@{
+    ViewBag.Title = "SatislemanGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("SatislemanGuncelle", "Satisleman", FormMethod.Post))
+{
+    <div class="form-group" style="margin:15px">
+
+        @Html.LabelFor(k => k.ID)
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        <br />
+        <label class="col-xs-pull-11">STIŞ ELEMANI ADI</label>
+        @*@@Html.LabelFor(k=>k.KASATIPI)*@
+        @Html.TextBoxFor(k => k.SATISLEMAN, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-bottom:15">
+        <button class="btn btn-warning">Güncelle</button>
+    </div>
+}
+

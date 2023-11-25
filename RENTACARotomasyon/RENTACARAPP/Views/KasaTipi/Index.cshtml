@@ -1,0 +1,55 @@
+﻿
+@using RENTACARAPP.Models.Entity
+@model List<TKASATIPI>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<style>
+    .tabla {
+        width: max-content;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .headers{
+        text-align:center;
+        font-size
+    }
+    .theader{
+        text-align:center;
+    }
+
+    
+    </style>
+<h2 class="headers">Araç Kasa Tipleri</h2>
+
+
+
+<div class="tabla">
+    <table class="table table-bordered" style="border:2px solid red;">
+        <tr>
+            <th class="theader">Kasa Tipi ID</th>
+            <th class="theader">Kasa Tip ADI</th>
+        </tr>
+
+        @foreach (var asd in Model)
+        {
+
+            <tr>
+                <td>@asd.ID</td>
+                <td>@asd.KASATIPI</td>
+                <td>
+                    @Html.ActionLink("Sil", "KasaTipiSil", new { id = asd.ID },
+               new { @class = "btn btn-danger", onclick = "return confirm('silmek istiyor musunuz')" })
+                </td>
+
+                <td><a href="/KasaTipi/KasaTipiGetir/@asd.ID" class="btn btn-success">Güncelle</a></td>
+
+
+            </tr>
+        }
+    </table>
+   
+    <a href="/KasaTipi/KasatipiEkle/"  class="btn btn-primary" style="margin-bottom:15px">Yeni Kasa Tipi Ekle</a>
+</div>

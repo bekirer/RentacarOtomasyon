@@ -1,0 +1,91 @@
+﻿@using RENTACARAPP.Models.Entity
+@model List<TAKSIYON>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<style>
+   
+
+    .tabla {
+        width: max-content;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+;
+    }
+
+    .headers {
+        text-align: center;
+        color:red
+    }
+
+    .theader {
+        text-align: center;
+    }
+</style>
+<h2 class="headers">Kiralık Verilen Araba Listesi</h2>
+
+
+
+<div class="tabla">
+
+
+
+    <table class="table table-bordered" style="border:2px solid red;">
+
+        <tr>
+            <td>İşlem ID</td>
+            <th>Arabanın Modeli</th>
+            <th>Üye</th>
+            <th>Satış Elamanı</th>
+            <th>Kiralanan Tarih</th>
+            <th>Teslim Edilecek Tarih</th>
+
+        </tr>
+
+        @foreach (var a in Model)
+        {
+            <tr>
+                <td>
+                    @a.ID
+                </td>
+
+                <td>
+                    @a.TARABA.MODEL
+                </td>
+
+                <td>
+                   @a.TUYELER.AD&nbsp;@a.TUYELER.SOYAD
+                    
+
+
+
+                </td>
+
+                <td>
+                    @a.TSATISELEMAN.SATISLEMAN
+                </td>
+
+                <td>
+                    @Convert.ToDateTime(a.KIRALAMATARIH).ToShortDateString()
+                </td>
+
+                <td>
+                    @Convert.ToDateTime(a.TESLIMTARIH).ToShortDateString()
+                </td>
+
+
+                <td>
+                    <a href="/Kiralama/TeslimEtme/@a.ID"
+                       class="btn btn-default" style="background-color:#4800ff;color:honeydew;font-family:'Comic Sans MS'">ARABAYI TESLİM  <br /> AL</a>
+                </td>
+
+
+            </tr>
+        }
+    </table>
+  
+</div>
+
